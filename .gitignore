@@ -1,0 +1,6 @@
+backend/lms-backend/build/
+backend/lms-backend/src/main/resources/keys/
+backend/lms-backend/bin/
+.gradle/
+.vscode
+.env
