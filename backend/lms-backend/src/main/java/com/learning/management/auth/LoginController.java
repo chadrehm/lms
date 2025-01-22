@@ -3,6 +3,7 @@ package com.learning.management.auth;
 import com.learning.management.auth.exceptions.ErrorResponse;
 
 import jakarta.inject.Inject;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -32,7 +33,7 @@ public class LoginController {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response login(LoginRequest loginRequest) throws Exception {
+    public Response login(@Valid LoginRequest loginRequest) throws Exception {
         try {
             // Authenticate the user and generate a JWT token
             String token = loginService.authenticate(loginRequest.getUsername(), loginRequest.getPassword());
