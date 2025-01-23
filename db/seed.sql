@@ -31,7 +31,7 @@ INSERT INTO classes (name, teacher_id) VALUES
 ('Science 101', 8); -- Michael Moore is teaching Science 101
 
 -- Insert enrollments (students to classes)
-INSERT INTO enrollments (student_id, class_id) VALUES
+INSERT INTO enrollment (student_id, class_id) VALUES
 (1, 1), -- John Doe in Class 1
 (4, 1), -- Emily Jones in Class 1
 (5, 1), -- Olivia Williams in Class 1

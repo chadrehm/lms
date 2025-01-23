@@ -29,7 +29,7 @@ CREATE TABLE classes (
 );
 
 -- Enrollment table to track which students are in which classes
-CREATE TABLE enrollments (
+CREATE TABLE enrollment (
     id SERIAL PRIMARY KEY,
     student_id INT NOT NULL REFERENCES user_profile(id),
     class_id INT NOT NULL REFERENCES classes(id),
@@ -39,7 +39,7 @@ CREATE TABLE enrollments (
 -- Grade table to track student grades in classes
 CREATE TABLE grades (
     id SERIAL PRIMARY KEY,
-    enrollment_id INT NOT NULL REFERENCES enrollments(id),
+    enrollment_id INT NOT NULL REFERENCES enrollment(id),
     grade VARCHAR(2), -- E.g., A+, B, etc.
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
